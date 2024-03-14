@@ -1,0 +1,518 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+}
+#navbar{
+    height:11%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    font-family: "Lexend Giga", sans-serif;
+}
+#nav_bar1{
+    width:40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9vw;
+    padding: 0 5vw 0 0;
+}
+#nav_bar1 h4{
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing:-2px;
+}
+#nav_bar1 h5{
+  display: none;
+}
+#navbar img{
+    height:100%;
+    width: 20%;
+}
+#nav_bar2{
+    height: 100%;
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    font-size: 0.9vw;
+}
+#nav_bar2 button{
+    margin: 0 10px;
+    font-size: 1vw;
+    font-weight: 700;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 12px 14px;
+    border-radius:50px;
+}
+#nav_bar2 button:nth-child(1){
+    background-color: transparent;
+    color: #000;
+}
+header{
+    height: calc(100% - 11%);
+    padding-top:6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+header h3{
+    width: fit-content;
+    border-radius:55px;
+    font-size: 1vw;
+    font-weight: 300;
+    color: #3b3a3a;
+    background-color: #F2B0EA;
+    padding:0.5vw;
+}
+header h1{
+    padding: 2vw;
+    font-weight:300;
+    text-align: center;
+    font-size: 4vw;
+    line-height: 0.9em;
+}
+header h4{
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+header button{
+    margin:1vw;
+    padding:  0.8vw;
+    border-radius: 5vw;
+    background: #000;
+    color: #fff;
+    border: none;
+}
+#bottom{
+    padding:0.5vw 1vw;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap:1vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.elem{
+    position: relative;
+    flex-shrink: 0;
+    height: 100%;
+    width:15%;
+    background-color: blue;    
+    border-radius: 20px;
+    animation: move 9s alternate 1s infinite forwards linear;
+    overflow: hidden;
+}
+.elem img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.elem video{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  object-position:  center;
+}
+.elem #text-bottom{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    height: 40%;
+    width: 100%;
+    padding: 1vw;
+}
+.elem #text-bottom h4{
+    font-size:1.5vw;
+    font-weight: 500;
+}
+.elem #text-bottom #text{
+    display: flex;
+    gap: 0.5vw;
+    margin-top:0.7vw;
+}
+.elem #text-bottom #text h5{
+    font-size: 1vw;
+    border: 2px solid rgb(243, 247, 55);
+    padding: 0 1vw;
+    border-radius: 30px;
+}
+@keyframes move {
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-400%); }
+}
+#first{
+    overflow: hidden;
+    height:220vh;
+    width: 100%;
+    position: relative;
+    padding:3vw 2vw 2vw 2vw;
+    font-family: "Lexend Giga", sans-serif;
+}
+#first h1{
+    font-weight:300;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+.box{
+    display: inline-block;
+    white-space: wrap;
+    height:19%;
+    width:15%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:2vw 4.5vw;
+    position: relative;
+}
+.box img{
+    height:100%;
+    width:100%;
+}
+.text-box{
+    height:40%;
+    width: 100%;
+    background: linear-gradient(transparent,rgb(231, 223, 223));
+    position: absolute;
+    bottom:-40%;
+    transition: .6s ease all;
+    color:rgb(56, 44, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:2vw 1vw;
+    font-size: 1.2vw;
+}
+.text-box i{
+    background-color: white;
+    color: #000;
+    padding:0.5vw;
+    border-radius: 50%;
+}
+.box:hover  .text-box {
+    bottom:0%;
+}
+.box:hover{
+    scale: 1.1;
+    box-shadow:1vw 1vw 10vw rgb(29, 31, 31);
+}
+#first button{
+   transform: translateX(-50%);
+   position: absolute;
+   left: 50%;
+   bottom: 1.5%;
+   padding: 1vw;
+   border-radius: 30px;
+   border: none;
+   background:linear-gradient(to right top,rgb(134, 226, 230)  ,rgb(238, 160, 15));
+   color:white;
+   font-weight: 600;
+   cursor: pointer; 
+}
+#second{
+    background:rgb(245, 191, 91);
+    height:100%;
+    width: 100%;
+    padding:6vw ;
+}
+#second h1{
+    font-size:5vw;
+    font-weight:400;
+    text-align:center;
+}
+#second p{
+    margin-top: 1vw;
+    font-size:1.5vw;
+    text-align:center;
+    font-weight: 100;
+    line-height: 3vw;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#second .link1{
+    border: none;
+    margin:5vw;
+    text-align:center;
+}
+#second .link1 button{
+    border: none;
+    padding:1vw 3vw;
+    border-radius: 30px;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+#second .link1 button:nth-child(1){
+    color: #fff;
+    background-color: #000;
+}
+#second .link2{
+    font-size: 2vw;
+    font-weight:100;
+    text-align:center;
+}
+footer{
+    padding:2vw 1vw;
+    height:30%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Lexend Giga", sans-serif;
+}
+footer #foot1{
+    height:15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer #foot1 img{
+    height:10vh;
+    width: 15vw;
+}
+footer #foot1 h4{
+    font-size: 0.8vw;
+    font-weight: 700;
+    height:15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+footer #foot1 h5 i{
+    margin-right: 1vw;
+    font-size: 1.5vw;
+}
+footer #foot2{
+    padding: 0 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+footer #foot2 .foot21{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+footer #foot2 .foot21 h6{
+    font-size: 0.8vw;
+    font-weight: 200;
+    margin-left: 2vw;
+    }
+footer #foot2 .foot22{
+    display: flex;
+    align-items: flex-end;
+}
+footer #foot2 .foot22 h6{
+    font-size: 0.8vw;
+    font-weight: 200;
+    margin:0 0.2vw 0 2vw;
+    }
+@media (min-width:214px) and  (max-width:420px){
+    #navbar{
+        height:9%;
+        padding:0 1vw;
+        position: relative;
+    }
+    #nav_bar1{
+        width:20%;
+        height: 100%;
+        padding:0;
+    }
+    #nav_bar1 h4{
+      display: none;
+    }
+    #nav_bar1 h5{
+      display:block;
+      font-size: 5vw;
+    }
+    #navbar img{
+        position: absolute;
+        transform: translateX(-50%);
+        left:50%;
+        top: 11%;
+        height:100%;
+        width:40%;
+    }
+    #nav_bar2 button{
+        margin: 0px;
+        font-size: 3vw;
+        padding:1.5vw 1.5vw;
+    }
+    header{
+        height: calc(100% - 11%);
+        padding-top:19vw;  
+    }
+    header h3{
+        width: fit-content;
+        font-size: 2.5vw;
+        font-weight: 400;
+        padding:1vw;
+    }
+    header h1{
+        padding:8vw;
+        font-weight:500;
+        font-size: 6vw;
+        line-height:7vw;
+    }
+    header h4{
+        font-weight: 100;
+        font-size: 2.6vw;
+    }
+    header button{
+        margin:8vw;
+        padding:1.5vw;
+    }
+    #bottom{
+        padding:1.5vw;
+        height: 300px;
+    }  
+    .elem{
+        height: 100%;
+        width:35%;
+        animation-duration:20s;
+    }
+    .elem #text-bottom{
+        position: absolute;
+        bottom: 0;
+        height: 20%;
+        width: 100%;
+        padding: 1.5vw;
+    }
+    .elem #text-bottom h4{
+        font-size:2vw;
+    }
+    .elem #text-bottom #text{
+        margin-top:1vw;
+    }
+    .elem #text-bottom #text h5{
+        font-size:2vw;
+    }
+    @keyframes move {
+        from{ transform: translateX(0); }
+        to{ transform: translateX(-745%); }
+    }
+    #first{
+        overflow: hidden;
+        height:440vh;
+        width: 100%;
+        position: relative;
+        padding:3vw 0;
+        font-family: "Lexend Giga", sans-serif;
+    }
+    #first h1{
+        font-weight:500;
+        font-size: 4vw;
+        margin-bottom: 3vw;
+    }
+    .box{
+        height:5.5%;
+        width:80%;
+        margin:2vw 9vw;
+    }
+    .text-box{
+        height:50%;
+        background: linear-gradient(transparent,rgb(231, 223, 223));
+        position: absolute;
+        bottom:-50%;
+        transition: .9s ease all;
+        color:rgb(8, 6, 6);
+        padding:2vw 8vw;
+        font-size: 5.2vw;
+    }
+    .text-box i{
+        padding:1vw;
+    }
+    #first button{
+       bottom: 0%;
+       padding: 1vw 2vw;
+       font-weight: 600;
+       font-size: 2vw; 
+    }
+    #second{
+        height:40%;
+        padding:15vw;
+    }
+    #second h1{
+        font-size:6vw;
+        font-weight:500;
+    }
+    #second p{
+        margin-top: 4vw;
+        font-size:2vw;
+        font-weight: 200;
+        line-height: 3.5vw;
+    }
+    #second .link1 button{
+        font-size: 2vw;
+    }
+    #second .link2{
+        font-size: 3vw;
+        font-weight:200;
+    }
+    footer{
+        height: 50%;
+        justify-content: space-around;
+    }
+    footer #foot1{
+        height:50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
+    footer #foot1 img{
+        height:10vh;
+        width: 55vw;
+    }
+    footer #foot1 h4{
+        font-size: 3vw;
+        font-weight: 700;
+        height:10%;
+        width:50%;
+        padding: 1vw 10vw;
+        display:inline-block;
+        align-items: center;
+    }
+    footer #foot1 h5 i{
+        margin-right: 5vw;
+        font-size: 3vw;
+    }
+    footer #foot2{
+        padding: 0 1vw;
+        display: flex;
+        justify-content: center;
+    }
+    footer #foot2 .foot21{
+        display:flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    footer #foot2 .foot21 h6{
+        font-size: 1.5vw;
+        font-weight: 300;
+        margin-left: 2vw;
+        }
+    footer #foot2 .foot22{
+        display: flex;
+        align-items: flex-end;
+    }
+    footer #foot2 .foot22 h6{
+        font-size:1.5vw;
+        font-weight: 300;
+        margin:0 0.2vw 0 2vw;
+        }
+}
